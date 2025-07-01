@@ -72,6 +72,10 @@ header {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+
+  /* Added for responsive wrapping */
+  flex-wrap: wrap; /* allow items to wrap on small screens */
+  gap: 10px;       /* spacing between nav and button */
 }
 
 .nav-list {
@@ -79,7 +83,9 @@ header {
   display: flex;
   justify-content: center;
   gap: 25px;
-  flex: 1;
+  flex: 1 1 100%; /* Allow nav to take full width and shrink */
+
+  margin-bottom: 0; /* Reset any margin */
 }
 
 .nav-list a {
@@ -102,10 +108,39 @@ header {
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.3s ease;
+
+  flex-shrink: 0;    /* Prevent shrinking */
+  margin-left: auto; /* Push toggle to the right */
 }
 
 #dark-mode-toggle:hover {
   background-color: rgba(255 255 255 / 0.2);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;  /* Stack nav and toggle vertically */
+    align-items: center;
+  }
+
+  .nav-list {
+    flex: none;
+    margin-bottom: 15px;
+    gap: 15px;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin-bottom: 10px;
+  }
+
+  #dark-mode-toggle {
+    width: 100%;
+    max-width: 200px;
+    margin-left: 0;
+  }
 }
 
 /* Hero Section */
