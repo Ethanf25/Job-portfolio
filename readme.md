@@ -13,6 +13,6 @@ This is my personal portfolio website showcasing my skills and projects built wi
 
 ## Contact
 
-Email: ethanf25@sbcglobal.net 
-GitHub: https://github.com/Ethanf25
+Email: ethanf25@sbcglobal.net |
+GitHub: https://github.com/Ethanf25 |
 LinkedIn: https://www.linkedin.com/in/ethan-friend25/
