@@ -45,3 +45,12 @@ window.addEventListener('load', () => {
 // Optionally show spinner manually while fetching data or heavy operations
 // spinner.style.display = 'block'; 
 // spinner.style.display = 'none';
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
